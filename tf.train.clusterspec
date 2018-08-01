@@ -1,0 +1,2 @@
+import tensorflow as tf
+tf.train.ClusterSpec({"local": ["localhost:2222","localhost:2223"]})
