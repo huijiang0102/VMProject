@@ -7,19 +7,11 @@ Use Tensorflow to do classification containing data preparation, training, testi
 
 ---
 
-中文博客地址： http://blog.csdn.net/renhanchi/article/details/79570665
-
----
-
 **All parameters are in `arg_parsing.py`. So before you start this program, you should read it carefully!**
 
 **STEPS:**
 
-1. Put all images in different diractories. Then run **img2list.sh** to create a txt file containing pathes and labels of all iamges.
-
-    ![txt content](https://img-blog.csdn.net/20180320151535236 "")
-
-2. Run **list2bin.py** to convert the images from rgb to tfrecords.
+1. Run **image_processing.py** to convert the images from rgb to tfrecords.
 
 3. For single computer, one GPU or more, whatever. Just run:
 
