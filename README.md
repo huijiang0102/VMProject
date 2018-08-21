@@ -19,18 +19,6 @@ Use Tensorflow to do classification containing data preparation, training, testi
   
 4. For distribution, first you should modify **PS_HOSTS** and **WORKER_HOSTS** in **arg_parsing.py**. And then copy all dataset and codes to every server. 
 
-  For ps host, run:
-
-    CUDA_VISIBLE_DEVICES='' python src/main.py --job_name=ps --task_index=0
-
-  **CUDA_VISIBLE_DEVICES=''** means using CPU to concat parameters.
-
-  For worker host, run:
-
-    python src/main.py --job_name=worker --task_index=0
-
-  Do remenber to increase **task_index** in every server.
-
 5. All ckpt and event files will be saved in **MODEL_DIR**.
 6. For testing, just run:
 
@@ -40,12 +28,7 @@ Use Tensorflow to do classification containing data preparation, training, testi
 
 **Notes**
 
-1. DO READ **arg_parsing.py** again and again to understand and control this program.
-
-2. Use **CUDA_VISIBLE_DEVICES=0,2** to choose GPUs.
-
-3. For visualization, run:
+1. For visualization, run:
 
        tensorboard --logdir=models/
     
-4. More details, please see my blog above.
